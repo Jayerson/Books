@@ -1,0 +1,80 @@
+{
+    "kind": "books#volumes",
+    "totalItems": 660,
+    "items": [
+      {
+        "kind": "books#volume",
+        "id": "4pXPAAAAMAAJ",
+        "etag": "7KqTQCXmViU",
+        "selfLink": "https://content-books.googleapis.com/books/v1/volumes/4pXPAAAAMAAJ",
+        "volumeInfo": {
+          "title": "The Parasite",
+          "authors": [
+            "Arthur Conan Doyle"
+          ],
+          "publisher": "Createspace Independent Publishing Platform",
+          "publishedDate": "1894",
+          "description": "March 24. The spring is fairly with us now. Outside my laboratory window the great chestnut-tree is all covered with the big, glutinous, gummy buds, some of which have already begun to break into little green shuttlecocks. As you walk down the lanes you are conscious of the rich, silent forces of nature working all around you. The wet earth smells fruitful and luscious. Green shoots are peeping out everywhere. The twigs are stiff with their sap; and the moist, heavy English air is laden with a faintly resinous perfume. Buds in the hedges, lambs beneath them-everywhere the work of reproduction going forward! I can see it without, and I can feel it within. We also have our spring when the little arterioles dilate, the lymph flows in a brisker stream, the glands work harder, winnowing and straining. Every year nature readjusts the whole machine. I can feel the ferment in my blood at this very moment, and as the cool sunshine pours through my window I could dance about in it like a gnat. So I should, only that Charles Sadler would rush upstairs to know what was the matter. Besides, I must remember that I am Professor Gilroy. An old professor may afford to be natural, but when fortune has given one of the first chairs in the university to a man of four-and-thirty he must try and act the part consistently.",
+          "industryIdentifiers": [
+            {
+              "type": "OTHER",
+              "identifier": "IND:32000006175071"
+            }
+          ],
+          "readingModes": {
+            "text": false,
+            "image": true
+          },
+          "pageCount": 124,
+          "printType": "BOOK",
+          "categories": [
+            "Gothic revival (Literature)"
+          ],
+          "averageRating": 5,
+          "ratingsCount": 1,
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": false,
+          "contentVersion": "1.3.4.0.full.1",
+          "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+          },
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=4pXPAAAAMAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=4pXPAAAAMAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.com.au/books?id=4pXPAAAAMAAJ&pg=PP1&dq=parasite&hl=&as_brr=7&as_ebook=1&as_pt=BOOKS&cd=1&source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=4pXPAAAAMAAJ&source=gbs_api",
+          "canonicalVolumeLink": "https://play.google.com/store/books/details?id=4pXPAAAAMAAJ"
+        },
+        "saleInfo": {
+          "country": "AU",
+          "saleability": "FREE",
+          "isEbook": true,
+          "buyLink": "https://play.google.com/store/books/details?id=4pXPAAAAMAAJ&rdid=book-4pXPAAAAMAAJ&rdot=1&source=gbs_api"
+        },
+        "accessInfo": {
+          "country": "AU",
+          "viewability": "ALL_PAGES",
+          "embeddable": true,
+          "publicDomain": true,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": false,
+            "downloadLink": "http://books.google.com.au/books/download/The_Parasite.epub?id=4pXPAAAAMAAJ&hl=&output=epub&source=gbs_api"
+          },
+          "pdf": {
+            "isAvailable": true,
+            "downloadLink": "http://books.google.com.au/books/download/The_Parasite.pdf?id=4pXPAAAAMAAJ&hl=&output=pdf&sig=ACfU3U0F_j9b_eEqpNbGzb-JHja5OuBOKw&source=gbs_api"
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=4pXPAAAAMAAJ&hl=&as_brr=7&as_ebook=1&as_pt=BOOKS&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "FULL_PUBLIC_DOMAIN",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "The twigs are stiff with their sap; and the moist, heavy English air is laden with a faintly resinous perfume. Buds in the hedges, lambs beneath them-everywhere the work of reproduction going forward!"
+        }
+      }
+    ]
+  }

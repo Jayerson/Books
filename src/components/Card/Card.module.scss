@@ -1,0 +1,24 @@
+$section: #09262e;
+$outline: #35545b;
+$text: #bcafa7;
+
+span {
+    width: 450px;
+    height: 600px;
+    background-color: $section;
+    color: $text;
+    border: 5px solid $outline;
+    border-radius: 15px;
+    box-shadow: -3px 2px 3px 3px $section;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+p {
+    justify-content: flex-start;
+    overflow-y: hidden;
+}
