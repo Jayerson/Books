@@ -19,8 +19,6 @@ const CardList = () => {
         const books = await response.json();
         setBooks(books);
     }
-    // books in useState does not match books in const books?
-
     
     // call when string is complete:
 
@@ -31,6 +29,12 @@ const CardList = () => {
     const handleClick = async () => {
         await setQuery(input);
         if (query !== undefined) await getBooks(query);
+        
+    }
+    const noTitle = {
+        title: "No Title",
+        authors: "",
+        description: "No book found, try more common phrases or keywords"
     }
 
     // send object
@@ -44,9 +48,13 @@ const CardList = () => {
                     <button onClick={handleClick}>Search</button>
                 </header>
                 <div>
-                    {books.items && books.items.map(each => {
-                        return <Card book={each.volumeInfo}/> 
-                    })}
+                    {
+                        books.items ?
+                            books.items.map(each => {
+                                return <Card book={each.volumeInfo}/> 
+                            }) :
+                            <Card book={noTitle} />
+                    }
                 </div>
             </div>
         );  

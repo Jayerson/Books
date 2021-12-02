@@ -26,7 +26,7 @@ button {
 }
 
 input {
-    width: 400px;
+    width: 300px;
     background-color: $text;
     color: $highlight;
     border: 5px solid $outline;
@@ -36,6 +36,15 @@ input {
     padding-left: 15px;
     font-size: 15px;
     font-weight: bold;
+    &:focus {
+        outline: 2px solid $highlight;
+    }
+}
+
+input:-webkit-autofill,
+input:autofill {
+    background-color: $text;
+    color: $highlight;
 }
 
 header {
