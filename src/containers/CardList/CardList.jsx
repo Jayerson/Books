@@ -5,44 +5,52 @@ import styles from "./CardList.module.scss";
 const CardList = () => {
     const [books, setBooks] = useState([]);
     const [query, setQuery] = useState("");
-
-    const input = "";
+    const [input, setInput] = useState("");
 
     const handleChange = (event) => {
-        input = event.target.value;
+        setInput(event.target.value);
     }
 
     const getBooks = async (query) => {
-        const response = await fetch(`https://books.googleapis.com/books/v1/volumes?q=${query}`); 
-// query will be the text input box value
+        const response = await fetch(`https://books.googleapis.com/books/v1/volumes?q=${query}`);
+
+        // query will be the text input box value
 
         const books = await response.json();
-        setBooks(books.items);
+        setBooks(books);
     }
-// call when string is complete
-    useEffect(() => {
-        getBooks();
+    // books in useState does not match books in const books?
+
+    
+    // call when string is complete:
+
+    useEffect((query) => {
+        if (query !== undefined) getBooks(query);
     }, []);
 
-    const handleClick = () => {
-        setQuery(input)
+    const handleClick = async () => {
+        await setQuery(input);
+        if (query !== undefined) await getBooks(query);
     }
-// send object
-    return (
-        <div style={styles}>
-            <header>
-                <h1>Find a Book</h1>
-                <label for="searchTerms">What books are you looking for?</label>
-                <input type="text" id="searchTerms" name="searchTerms" onChange={handleChange}/>
-                <button onClick={handleClick}>Search</button>
-            </header>
-            <div>
-                {books.map(volume => {
-                    return <Card book={volume.volumeInfo}/> 
-                })}
+
+    // send object
+    if (books) {
+        return (
+            <div style={styles}>
+                <header>
+                    <h1>Find a Book</h1>
+                    <label for="searchTerms">What books are you looking for?</label>
+                    <input type="text" id="searchTerms" name="searchTerms" onChange={handleChange}style={styles}/>
+                    <button onClick={handleClick}>Search</button>
+                </header>
+                <div>
+                    {books.items && books.items.map(each => {
+                        return <Card book={each.volumeInfo}/> 
+                    })}
+                </div>
             </div>
-        </div>
-    );
+        );  
+    }
 };
 
 export default CardList;
