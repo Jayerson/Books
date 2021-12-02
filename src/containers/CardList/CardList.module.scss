@@ -26,7 +26,7 @@ button {
 }
 
 input {
-    width: 300px;
+    width: 400px;
     background-color: $text;
     color: $highlight;
     border: 5px solid $outline;
@@ -41,14 +41,14 @@ input {
     }
 }
 
-input:-webkit-autofill,
-input:autofill {
-    background-color: $text;
-    color: $highlight;
-}
-
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+em {
+    color: $highlight;
+    font-style: italic;
+    font-weight: bolder;
 }

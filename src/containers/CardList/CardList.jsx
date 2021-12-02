@@ -44,14 +44,15 @@ const CardList = () => {
                 <header>
                     <h1>Find a Book</h1>
                     <label for="searchTerms">What books are you looking for?</label>
-                    <input type="text" id="searchTerms" name="searchTerms" onChange={handleChange}style={styles}/>
+                    <input type="text" id="searchTerms" name="searchTerms" onChange={handleChange} style={styles}/>
                     <button onClick={handleClick}>Search</button>
+                    <em>Click on a book for more info</em>
                 </header>
                 <div>
                     {
                         books.items ?
                             books.items.map(each => {
-                                return <Card book={each.volumeInfo}/> 
+                                return <Card book={each.volumeInfo} /> 
                             }) :
                             <Card book={noTitle} />
                     }
