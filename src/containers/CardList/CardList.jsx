@@ -20,17 +20,21 @@ const CardList = () => {
         setBooks(books);
     }
     
+    const handleClick = () => {
+        setQuery(input);        
+    }
+
     // call when string is complete:
 
     useEffect((query) => {
-        if (query !== undefined) getBooks(query);
+        if (query !== "") getBooks(query);
     }, []);
 
-    const handleClick = async () => {
-        await setQuery(input);
-        if (query !== undefined) await getBooks(query);
-        
-    }
+    useEffect(() => {
+        if (query !== "") getBooks(query);
+    }, [query]);
+
+    
     const noTitle = {
         title: "No Title",
         authors: "",
@@ -43,7 +47,7 @@ const CardList = () => {
             <div style={styles}>
                 <header>
                     <h1>Find a Book</h1>
-                    <label for="searchTerms">What books are you looking for?</label>
+                    <label htmlForfor="searchTerms">What books are you looking for?</label>
                     <input type="text" id="searchTerms" name="searchTerms" onChange={handleChange} style={styles}/>
                     <button onClick={handleClick}>Search</button>
                     <em>Click on a book for more info</em>
@@ -52,7 +56,7 @@ const CardList = () => {
                     {
                         books.items ?
                             books.items.map(each => {
-                                return <Card book={each.volumeInfo} /> 
+                                return <Card key={each.id} book={each.volumeInfo} /> 
                             }) :
                             <Card book={noTitle} />
                     }

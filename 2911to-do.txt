@@ -1,5 +1,0 @@
-
-
-Bonus:
-- feedback for no results
-- more info for grid onClick (eg publish date, country, language(s), etc)
